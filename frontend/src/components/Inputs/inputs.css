@@ -1,0 +1,86 @@
+.form{
+    width: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    margin: 2rem auto 3rem;
+    /* border: 2px solid red; */
+    /* width: 51%; */
+}
+.label-div{
+    display: flex;
+    flex-direction: column;
+    /* margin: 4px auto; */
+    padding: 10px;
+    padding: 36px 40px 10px;
+}
+.upperlabel{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px auto;
+}
+.form-div{
+    width: 90%;
+    margin: 2rem auto;
+}
+.form-div h4{
+    color: #7bd1d8;
+    font-size: 2rem;
+    font-weight: bold;
+    /* margin: 5px auto; */
+    padding: 10px auto;
+    padding: 0px 0px 0px 36px;
+}
+label{
+    font-size: 16px;
+    color: white;
+    margin-bottom: 8px;
+}
+input , select{
+    height: 50px;
+    width: 25vw;
+    padding: 5px 10px;
+    color: #43e0e0;
+    font-size: 18px;
+    font-weight: bold;
+    caret-color: hsl(159.35deg 100% 24.91% / 80%);
+    background-color: #00000030;
+    border: 1px solid #545454;
+    border-radius: 4px;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+select{
+    position: relative;
+    -webkit-appearance: none; 
+    appearance: none;
+}
+/* .select::after{
+    content: "BC";
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    background: #000000;
+    pointer-events: none;
+} */
+.option{
+    background-color: rgb(37, 37, 37);
+    padding: 5px 8px;
+    border: 1px solid thin #545454;
+    border-radius: 4px;
+}
+input:focus{
+    border: 2px solid #0adaff;
+    outline: 0;
+}
+hr{
+    border-top: 1px thin dashed rgb(157, 154, 154);
+    /* height: 2px; */
+    width: 100%;
+    margin: 2rem auto;
+}
