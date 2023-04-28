@@ -26,7 +26,7 @@ df_dict['incentive'] = int(data['incentive'])
 df_dict['idle_time'] = float(data['idle_time'])
 df_dict['idle_men'] = int(data['idle_men'])
 df_dict['no_of_style_change'] = int(data['no_of_style_change'])
-df_dict['no_of_workers'] = int(data['no_of_workers'])
+df_dict['no_of_workers'] = int(data['no_of_workegitrs'])
 df_dict['month'] = int(data['month'])
 
 
