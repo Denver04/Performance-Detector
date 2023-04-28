@@ -80,7 +80,7 @@ input:focus{
 }
 hr{
     border-top: 1px thin dashed rgb(157, 154, 154);
-    /* height: 2px; */
+    border: solid thin #4f4f4f;
     width: 100%;
     margin: 2rem auto;
 }

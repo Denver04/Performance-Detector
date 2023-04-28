@@ -51,13 +51,13 @@ const Inputs = () => {
                 <label>Day: </label>
                 <select placeholder="Work Day" value={input.day} name="day" onChange={handleChange} className="select">
                     <option className="option" value="" disabled>Select Day</option>
-                    <option className="option" value="0">Monday</option>
-                    <option className="option" value="1">Tuesday</option>
-                    <option className="option" value="2">Wednesday</option>
-                    <option className="option" value="3">Thursday</option>
-                    <option className="option" value="4">Friday</option>
-                    <option className="option" value="5">Saturday</option>
-                    <option className="option" value="6">Sunday</option>
+                    <option className="option" value="Monday">Monday</option>
+                    <option className="option" value="Tuesday">Tuesday</option>
+                    <option className="option" value="Wednesday">Wednesday</option>
+                    <option className="option" value="Thursday">Thursday</option>
+                    {/* <option className="option" value="4">Friday</option> */}
+                    <option className="option" value="Sunday">Friday</option>
+                    <option className="option" value="Saturday">Saturday</option>
                 </select>
                 </div>
 
