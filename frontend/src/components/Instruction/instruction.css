@@ -1,0 +1,71 @@
+.rule1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2% 0 3%;
+    background-color: rgb(92 238 183);
+    border-radius: 0px 0px 35% 25%;
+}
+.rule-image{
+    width: 20%;
+    height: 20%;
+}
+.rule-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.rule-text{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.rule-text h1{
+    font-size: 3rem;
+    background: linear-gradient(315deg,#224736,#334d42 76%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.rule2{
+    /* border: 2px solid red; */
+    margin: 3rem 0;
+}
+.rule2 .rule-text{
+    width: 90%;
+    /* border:solid #02eb7e; */
+    margin: auto;
+}
+.rule2 .rule-text ul{
+    width: 100%;
+    list-style: none;
+    color: aqua;
+    padding: 0;
+    margin: 0;
+}
+.rule2 .rule-text ul li{
+    font-size: 17px;
+    padding: 10px 5px;
+    /* border: 2px solid #02eb7e; */
+    margin: 12px 0;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #2a2a2a;
+}
+.rule2 .rule-text ul li:hover{
+    background-color: #2a3a3a;
+    cursor: pointer;
+}
+.rule2 .rule-text ul li p{
+    font-size: 18px;
+    color: #ffffff;
+}
+.rule2 .rule-text ul li span{
+    font-size: 18px;
+    color: #9cfbfb;
+    font-weight: bold;
+}
