@@ -10,10 +10,10 @@ dir = os.getcwd()
 
 features_to_encode = ['quarter', 'department', 'day', 'team', 'month']
 
-with open(os.path.join(dir , 'employee')) as f:
+with open(os.path.join(dir , 'employee.json'), 'r') as f:
     # Load the contents of the file into a variable
     data = json.load(f)
-os.remove(os.path.join(dir , 'employee'))
+os.remove(os.path.join(dir , 'employee.json'))
     
 df_dict = dict()
 df_dict['quarter'] = data['quarter']
