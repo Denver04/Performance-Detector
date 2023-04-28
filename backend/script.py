@@ -2,10 +2,15 @@ import pickle
 import json
 import pandas as pd
 import numpy as np
+import os
+
+dir = os.path.dirname(__file__)
+print(dir)
+
 
 features_to_encode = ['quarter', 'department', 'day', 'team', 'month']
 
-with open('employee.json') as f:
+with open(os.path.join(dir , 'employee')) as f:
     # Load the contents of the file into a variable
     data = json.load(f)
     
@@ -27,7 +32,7 @@ df_dict['month'] = int(data['month'])
 
 
 df = pd.DataFrame(df_dict, index=[0])
-with open('encoder.pkl', 'rb') as f:
+with open(os.path.join(dir ,'/encoder.pkl'), 'rb') as f:
     encoder = pickle.load(f)
 
 encoded_data = encoder.transform(df[features_to_encode])
@@ -36,7 +41,7 @@ encoded_data_df = pd.DataFrame(encoded_data, columns=encoder.get_feature_names_o
 final_df = pd.concat([df.drop(features_to_encode, axis=1), encoded_data_df], axis=1)
 
 # print(final_df.head())
-with open('model_rf.pkl', 'rb') as f:
+with open(os.path.join(dir ,'/model_rf.pkl'), 'rb') as f:
     model = pickle.load(f)
     
 

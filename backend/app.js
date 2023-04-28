@@ -2,6 +2,7 @@ const express = require("express");
 const fs = require("fs");
 const bodyParser = require("body-parser");
 const { type } = require("os");
+const {spawn} = require('child_process');
 // const multer = require("multer");
 
 const app = express();
@@ -42,8 +43,25 @@ app.post("/employee" , (req , res , next) => {
             console.log('Successfully wrote file')
         }
     })
-    res.write("hello sent");
-    res.end();
+
+
+    var dataToSend;
+    // spawn new child process to call the python script
+    const python = spawn('python', ['script.py']);
+    // collect data from script
+    python.stdout.on('data', function (data) {
+    // console.log('Pipe data from python script ...');
+    dataToSend = data.toString();
+    });
+    // in close event we are sure that stream from child process is closed
+    python.on('close', (code) => {
+    // console.log(`child process close all stdio with code ${code}`);
+    // send data to browser
+    res.send(dataToSend)
+    });
+
+    // res.write("hello sent");
+    // res.end();
 });
 
 app.listen(PORT, () => {
