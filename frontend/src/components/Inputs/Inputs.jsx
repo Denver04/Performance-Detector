@@ -1,8 +1,14 @@
+import React from "react";
 import "./inputs.css"
 import { useState } from "react";
-import axios from "axios"
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { sharedContext } from "../../context/InfoContext";
 
 const Inputs = () => {
+    const navigate = useNavigate();
+    const { updateInformation , updateName } = React.useContext(sharedContext);
+
     const [input , setInput] = useState({
         quarter: '',
         department: '',
@@ -31,30 +37,18 @@ const Inputs = () => {
     }
     const handleClick = (e) => {
         
-        // let formdata = new FormData();
-        // formdata.append("quarter", input.quarter);
-        // formdata.append("department", input.department);
-        // formdata.append("name", input.name);
-        // formdata.append("day", input.day);
-        // formdata.append("no_of_style_change", input.no_of_style_change);
-        // formdata.append("team", input.team);
-        // formdata.append("no_of_workers", input.no_of_workers);
-        // formdata.append("over_time", input.over_time);
-        // formdata.append("incentive", input.incentive);
-        // formdata.append("idle_time", input.idle_time);
-        // formdata.append("quarter", input.idle_men);
-        // formdata.append("smv", input.smv);
-        // formdata.append("month", input.month);
-        // formdata.append("targeted_productivity", input.targeted_productivity);
-        // console.log(formdata);
-        axios.post(api, input).then((res) => {
-            console.log(res);
+        axios.post(api, input).then((res) => { 
+            console.log(res);     
+            updateName('16.8')
+            updateInformation(input);
+            navigate(`/employee/${input.name}`)
         })
         .catch((err) => {
             console.log(err);
         })
         e.preventDefault();
     }
+    // }
     return (
     <div>
     <form className="form" autoComplete="off">
@@ -70,8 +64,8 @@ const Inputs = () => {
                     <label>Gender: </label>
                     <select placeholder="gender" name="gender" className="select">
                         <option className="option" disabled>Choose</option>
-                        <option className="option" >Male</option>
-                        <option className="option" >Female</option>
+                        <option className="option" value="male">Male</option>
+                        <option className="option" value="female">Female</option>
                     </select>
                 </div>
 
@@ -204,6 +198,7 @@ const Inputs = () => {
         </div>
 
         <button onClick={handleClick} type="submit">Submit</button>
+        {/* <Link to="/employee/abc">fsef</Link> */}
     </form>
     </div>
     )

@@ -17,46 +17,46 @@ function Instruction() {
             <div className="rule-text">
                 <ul>
                     <li>
-                        <p><span>Name: </span>Name of the employee.</p>
+                        <p><span>Name : </span>Name of the employee.</p>
                     </li>
                     <li>
-                        <p><span>Day: </span>Day of the Week.</p>
+                        <p><span>Day : </span>Day of the Week.</p>
                     </li>
                     <li>
-                        <p><span>Quarter: </span>A portion of the month. A month was divided into five quarters.</p>
+                        <p><span>Quarter : </span>A portion of the month. A month was divided into five quarters.</p>
                     </li>
                     <li>
-                        <p><span>Month: </span>jdawdadad</p>
+                        <p><span>Month : </span>jdawdadad</p>
                     </li>
                     <li>
-                        <p><span>Department: </span>Associated department with the instance</p>
+                        <p><span>Department : </span>Associated department with the instance</p>
                     </li>
                     <li>
-                        <p><span>Overtime: </span>Represents the amount of overtime by each team in minutes.</p>
+                        <p><span>Overtime : </span>Represents the amount of overtime by each team in minutes.</p>
                     </li>
                     <li>
-                        <p><span>Team No: </span>Associated team number with the instance.</p>
+                        <p><span>Team No : </span>Associated team number with the instance.</p>
                     </li>
                     <li>
-                        <p><span>No Of Workers: </span>Number of workers in each team</p>
+                        <p><span>No Of Workers : </span>Number of workers in each team</p>
                     </li>
                     <li>
-                        <p><span>No Of Style Change: </span> Number of changes in the style of a particular product.</p>
+                        <p><span>No Of Style Change : </span> Number of changes in the style of a particular product.</p>
                     </li>
                     <li>
-                        <p><span>Targeted Productivity: </span>Targeted productivity set by the Authority for each team for each day.</p>
+                        <p><span>Targeted Productivity : </span>Targeted productivity set by the Authority for each team for each day.</p>
                     </li>
                     <li>
-                        <p><span>Incentive: </span>Represents the amount of financial incentive (in BDT) that enables or motivates a particular course of action.</p>
+                        <p><span>Incentive : </span>Represents the amount of financial incentive (in BDT) that enables or motivates a particular course of action.</p>
                     </li>
                     <li>
-                        <p><span>Idle Time: </span>The amount of time when the production was interrupted due to several reasons.</p>
+                        <p><span>Idle Time : </span>The amount of time when the production was interrupted due to several reasons.</p>
                     </li>
                     <li>
-                        <p><span>Idle Men: </span>The number of workers who were idle due to production interruption.</p>
+                        <p><span>Idle Men : </span>The number of workers who were idle due to production interruption.</p>
                     </li>
                     <li>
-                        <p><span>Smv: </span>Standard Minute Value, it is the allocated time for a task.</p>
+                        <p><span>Smv : </span>Standard Minute Value, it is the allocated time for a task.</p>
                     </li>
                 </ul>
             </div>

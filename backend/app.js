@@ -43,7 +43,7 @@ app.post("/employee" , (req , res , next) => {
         }
     })
     res.write("hello sent");
-    req.end();
+    res.end();
 });
 
 app.listen(PORT, () => {
