@@ -52,12 +52,12 @@
     padding: 10px 5px;
     /* border: 2px solid #02eb7e; */
     margin: 12px 0;
-    padding: 15px;
+    padding: 20px 15px;
     border-radius: 20px;
     background-color: #2a2a2a;
 }
 .rule2 .rule-text ul li:hover{
-    background-color: #2a3a3a;
+    background-color: #2b3131;
     cursor: pointer;
 }
 .rule2 .rule-text ul li p{

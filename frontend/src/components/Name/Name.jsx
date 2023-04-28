@@ -1,10 +1,10 @@
 import React from "react";
-import { sharedContext } from "../context/InfoContext"
+import { sharedContext } from "../../context/InfoContext"
 import "./name.css"
-import perform from "../images/perform.png"
-import lazy from "../images/lazy.png"
-import hard from "../images/hard.png"
-import help from "../images/help.png"
+import perform from "../../images/perform.png"
+import lazy from "../../images/lazy.png"
+import hard from "../../images/hard.png"
+import help from "../../images/help.png"
 
 function Name() {
     // eslint-disable-next-line no-unused-vars

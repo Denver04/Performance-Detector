@@ -3,7 +3,7 @@ import { BrowserRouter , Routes , Route } from 'react-router-dom'
 import Hero from './components/Hero/Hero'
 import Instruction from './components/Instruction/Instruction'
 import Navbar from './components/Navbar/Navbar'
-import Name from './Name/Name'
+import Name from './components/Name/Name'
 import { sharedContext } from './context/InfoContext'
 import React from 'react'
 
