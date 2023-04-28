@@ -40,34 +40,29 @@ label{
     color: white;
     margin-bottom: 8px;
 }
+select{
+    position: relative;
+    -webkit-appearance: none; 
+    appearance: none;
+    color: #62b3a7;
+}
 input , select{
     height: 50px;
     width: 25vw;
     padding: 5px 10px;
-    color: #43e0e0;
+    /* color: #43e0e0; */
+    color: #62b3a7;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 500;
     caret-color: hsl(159.35deg 100% 24.91% / 80%);
     background-color: #00000030;
     border: 1px solid #545454;
     border-radius: 4px;
     box-shadow: none;
     box-sizing: border-box;
+    letter-spacing: 0.6px;
 }
-select{
-    position: relative;
-    -webkit-appearance: none; 
-    appearance: none;
-}
-/* .select::after{
-    content: "BC";
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 10px;
-    background: #000000;
-    pointer-events: none;
-} */
+
 .option{
     background-color: rgb(37, 37, 37);
     padding: 5px 8px;
@@ -75,7 +70,7 @@ select{
     border-radius: 4px;
 }
 input:focus{
-    border: 2px solid #0adaff;
+    border: 2px solid #4898a3;
     outline: 0;
 }
 hr{
@@ -88,6 +83,7 @@ input::-webkit-input-placeholder{
     font-size: 15px;
     text-decoration: transparent;
     color: rgba(232, 231, 230, 0.396);
+    font-weight: 500;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

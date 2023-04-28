@@ -8,21 +8,34 @@ import help from "../images/help.png"
 
 function Name() {
     // eslint-disable-next-line no-unused-vars
-    const { information , name } = React.useContext(sharedContext);
+    const { information , output } = React.useContext(sharedContext);
+
+    if(information.month === "1"){
+        information.month = "January"
+    }
+    else if(information.month === "2"){
+        information.month = "February"
+    }
+    else{
+        information.month = "March"
+    }
 
   return (
     <div className="result">
         <div className="result1">
             <div className="perform-panda">
                 {
-                    name >= 75 ? <img src={hard} alt="perform" /> : name >= 50 ? <img src={perform} alt="perform" /> : name >= 25 ? <img src={help} alt="perform" /> : <img src={lazy} alt="perform" />
+                    output >= 75 ? <img src={hard} alt="perform" /> : output >= 50 ? <img src={perform} alt="perform" /> : output >= 25 ? <img src={help} alt="perform" /> : <img src={lazy} alt="perform" />
                 }
             </div>
             <h1>Performace Result</h1>
         </div>
         <div className="result2">
             <div className="info">
-                Name : <span>{name}</span>
+                Name : <span>{information.name}</span>
+            </div>
+            <div className="info">
+                Gender : <span>{information.gender}</span>
             </div>
             <div className="info">
                 Day : <span>{information.day}</span>
@@ -65,7 +78,7 @@ function Name() {
             </div>
         </div>
         <div className="prediction">
-            Prediction : <span>89.5%</span>
+            Predicted Productivity : <span>{output}%</span>
         </div>
     </div>
   )

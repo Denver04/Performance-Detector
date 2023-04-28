@@ -36,7 +36,7 @@ app.post("/employee" , (req , res , next) => {
     const input = req.body;
     
     const jsonString = JSON.stringify(input)
-    fs.writeFile('./employee.json', jsonString, err => {
+    fs.writeFile('./employee', jsonString, err => {
         if (err) {
             console.log('Error writing file', err)
         } else {
@@ -46,27 +46,21 @@ app.post("/employee" , (req , res , next) => {
 
 
     var dataToSend;
-    // spawn new child process to call the python script
     const python = spawn('python', ['script.py']);
-    // collect data from script
     python.stdout.on('data', function (data) {
-    // console.log('Pipe data from python script ...');
     dataToSend = data.toString();
     });
-    // in close event we are sure that stream from child process is closed
     python.on('close', (code) => {
-    // console.log(`child process close all stdio with code ${code}`);
-    // send data to browser
     res.send(dataToSend)
-
-    fs.unlink("./employee", (err) => {
-        if (err) {
-          console.error(err);
-          return;
-        }
-        console.log("File deleted successfully!");
-      });
-    });
+    })
+    // fs.unlink("./employee.json", (err) => {
+    //     if (err) {
+    //       console.error(err);
+    //       return;
+    //     }
+    //     console.log("File deleted successfully!");
+    //   });
+    // });
 
     // res.write("hello sent");
     // res.end();

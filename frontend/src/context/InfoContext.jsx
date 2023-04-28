@@ -6,7 +6,7 @@ export const sharedContext = React.createContext();
 // eslint-disable-next-line react/prop-types
 export const SharedProvider = ({ children }) => {
     const [information, setInformation] = React.useState([]);
-    const [name, setName] = React.useState("");
+    const [output, setName] = React.useState("");
   
     const updateInformation = (newInformation) => {
       setInformation(newInformation);
@@ -17,7 +17,7 @@ export const SharedProvider = ({ children }) => {
     };
   
     return (
-      <sharedContext.Provider value={{ information, updateInformation , name , updateName}}>
+      <sharedContext.Provider value={{ information, updateInformation , output , updateName}}>
         {children}
       </sharedContext.Provider>
     );

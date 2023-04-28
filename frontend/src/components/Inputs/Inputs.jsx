@@ -13,6 +13,7 @@ const Inputs = () => {
         quarter: '',
         department: '',
         name: '',
+        gender:'',
         day: '',
         no_of_style_change: '',
         team: '',
@@ -37,9 +38,9 @@ const Inputs = () => {
     }
     const handleClick = (e) => {
         
-        axios.post(api, input).then((res) => { 
-            console.log(res);     
-            updateName('16.8')
+        axios.post(api, input).then((res) => {    
+            console.log(res);  
+            updateName(res.data)
             updateInformation(input);
             navigate(`/employee/${input.name}`)
         })
@@ -57,15 +58,16 @@ const Inputs = () => {
             <div className="upperlabel">
                 <div className="label-div">
                 <label>Name: </label>
-                <input type="text" placeholder="your name" value={input.name} name="name" onChange={handleChange} autoComplete="off" />
+                <input type="text" placeholder="Enter Your Name" value={input.name} name="name" onChange={handleChange} autoComplete="off" />
                 </div>
 
                 <div className="label-div">
                     <label>Gender: </label>
-                    <select placeholder="gender" name="gender" className="select">
-                        <option className="option" disabled>Choose</option>
-                        <option className="option" value="male">Male</option>
-                        <option className="option" value="female">Female</option>
+                    <select placeholder="gender" value={input.gender} onChange={handleChange} name="gender" className="select">
+                        <option className="option" value="" disabled>Choose</option>
+                        <option className="option" value="Male">Male</option>
+                        <option className="option" value="Female">Female</option>
+                        <option className="option" value="Other">Other</option>
                     </select>
                 </div>
 
@@ -127,7 +129,7 @@ const Inputs = () => {
 
                 <div className="label-div">
                 <label>Overtime: </label>
-                <input type="number" placeholder="overtime" value={input.over_time} name="over_time" onChange={handleChange} autoComplete="off" />
+                <input type="number" placeholder="Overtime" value={input.over_time} name="over_time" onChange={handleChange} autoComplete="off" />
                 </div>
 
                 <div className="label-div">
@@ -152,12 +154,12 @@ const Inputs = () => {
 
                 <div className="label-div">
                 <label>No Of Workers: </label>
-                <input type="number" value={input.no_of_workers} placeholder="no of workers" name="no_of_workers" onChange={handleChange} autoComplete="off" />
+                <input type="number" value={input.no_of_workers} placeholder="No of Workers" name="no_of_workers" onChange={handleChange} autoComplete="off" />
                 </div>
 
                 <div className="label-div">
                 <label>No Of Style Change: </label>
-                <input type="number" value={input.no_of_style_change} placeholder="no of style change" name="no_of_style_change" onChange={handleChange} autoComplete="off" />
+                <input type="number" value={input.no_of_style_change} placeholder="No of Style Change" name="no_of_style_change" onChange={handleChange} autoComplete="off" />
                 </div>
             </div>
 
@@ -171,27 +173,27 @@ const Inputs = () => {
 
                 <div className="label-div">
                     <label>Targeted Productivity: </label>
-                    <input type="number" value={input.targeted_productivity} placeholder="productivity" name="targeted_productivity" onChange={handleChange} autoComplete="off" />
+                    <input type="number" value={input.targeted_productivity} placeholder="Productivity" name="targeted_productivity" onChange={handleChange} autoComplete="off" />
                 </div>
 
                 <div className="label-div">
                 <label>Incentive: </label>
-                <input type="number" value={input.incentive} placeholder="incentive" name="incentive" onChange={handleChange} autoComplete="off"/>
+                <input type="number" value={input.incentive} placeholder="Incentive" name="incentive" onChange={handleChange} autoComplete="off"/>
                 </div>
 
                 <div className="label-div">
                 <label>Idle Time: </label>
-                <input type="number" value={input.idle_time} placeholder="Idle time count" name="idle_time" onChange={handleChange} autoComplete="off"/>
+                <input type="number" value={input.idle_time} placeholder="Idle Time Count" name="idle_time" onChange={handleChange} autoComplete="off"/>
                 </div>
 
                 <div className="label-div">
                 <label>Idle Men: </label>
-                <input type="number" value={input.idle_men} placeholder="idle men Count" name="idle_men" onChange={handleChange} autoComplete="off"/>
+                <input type="number" value={input.idle_men} placeholder="Idle Men Count" name="idle_men" onChange={handleChange} autoComplete="off"/>
                 </div>
 
                 <div className="label-div">
                 <label>Smv: </label>
-                <input type="number" value={input.smv} placeholder="smv" name="smv" onChange={handleChange} autoComplete="off" />
+                <input type="number" value={input.smv} placeholder="Smv" name="smv" onChange={handleChange} autoComplete="off" />
                 </div>
             </div>
             
