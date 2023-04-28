@@ -36,7 +36,7 @@ app.post("/employee" , (req , res , next) => {
     const input = req.body;
     
     const jsonString = JSON.stringify(input)
-    fs.writeFile('./employee', jsonString, err => {
+    fs.writeFile('./employee.json', jsonString, err => {
         if (err) {
             console.log('Error writing file', err)
         } else {
@@ -58,6 +58,14 @@ app.post("/employee" , (req , res , next) => {
     // console.log(`child process close all stdio with code ${code}`);
     // send data to browser
     res.send(dataToSend)
+
+    fs.unlink("./employee", (err) => {
+        if (err) {
+          console.error(err);
+          return;
+        }
+        console.log("File deleted successfully!");
+      });
     });
 
     // res.write("hello sent");
