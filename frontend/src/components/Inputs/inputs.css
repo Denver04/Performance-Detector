@@ -84,3 +84,13 @@ hr{
     width: 100%;
     margin: 2rem auto;
 }
+input::-webkit-input-placeholder{
+    font-size: 15px;
+    text-decoration: transparent;
+    color: rgba(232, 231, 230, 0.396);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

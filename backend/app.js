@@ -1,9 +1,16 @@
 const express = require("express");
 const fs = require("fs");
+const bodyParser = require("body-parser");
+const { type } = require("os");
+// const multer = require("multer");
 
 const app = express();
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+// app.use(express.json());
+// app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+// const upload = multer({ dest: 'uploads/' });
 
 const PORT = process.env.PORT || 5000;
 app.use((req, res, next) => {
@@ -24,8 +31,9 @@ app.get("/", (req , res , next) => {
     res.send("Hello from Express!");
 })
 
-app.post("/employee", (req , res , next) => {
+app.post("/employee" , (req , res , next) => {
     const input = req.body;
+    
     const jsonString = JSON.stringify(input)
     fs.writeFile('./employee', jsonString, err => {
         if (err) {
@@ -34,12 +42,8 @@ app.post("/employee", (req , res , next) => {
             console.log('Successfully wrote file')
         }
     })
-    res.send("File saved successfully")
-    // console.log(input);
-    // res.status(201).json({
-    //     name:input,
-    //     message: "Employee added successfully"
-    // });
+    res.write("hello sent");
+    req.end();
 });
 
 app.listen(PORT, () => {

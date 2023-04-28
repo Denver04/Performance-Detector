@@ -1,5 +1,6 @@
 import panda from '../../images/panda-logo.png'
 import "./navbar.css"
+import {NavLink} from "react-router-dom"
 
 function Navbar() {
   return (
@@ -8,11 +9,8 @@ function Navbar() {
             <img src={panda} alt="logo" />
         </div>
         <div className='tags'>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#input">Inputs</a></li>
-                <li><a href="#result">Result</a></li>
-            </ul>
+                <NavLink className="navlink" to="/">Home</NavLink>
+                <NavLink className="navlink" to="/rules">Instructions</NavLink>
         </div>
     </nav>
   )
