@@ -44,7 +44,6 @@ app.post("/employee" , (req , res , next) => {
         }
     })
 
-
     var dataToSend;
     const python = spawn('python', ['script.py']);
     python.stdout.on('data', function (data) {
@@ -53,17 +52,7 @@ app.post("/employee" , (req , res , next) => {
     python.on('close', (code) => {
     res.send(dataToSend)
     })
-    // fs.unlink("./employee.json", (err) => {
-    //     if (err) {
-    //       console.error(err);
-    //       return;
-    //     }
-    //     console.log("File deleted successfully!");
-    //   });
-    // });
-
-    // res.write("hello sent");
-    // res.end();
+    
 });
 
 app.listen(PORT, () => {

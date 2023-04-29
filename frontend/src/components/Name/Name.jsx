@@ -16,7 +16,7 @@ function Name() {
     else if(information.month === "2"){
         information.month = "February"
     }
-    else{
+    else if(information.month === "3"){
         information.month = "March"
     }
 
