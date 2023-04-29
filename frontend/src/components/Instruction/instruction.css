@@ -61,8 +61,10 @@
     cursor: pointer;
 }
 .rule2 .rule-text ul li p{
-    font-size: 18px;
-    color: #ffffff;
+    font-size: 17px;
+    color: #d2cfcf;
+    letter-spacing: 1.5px;
+    line-height: 32px;
 }
 .rule2 .rule-text ul li span{
     font-size: 18px;

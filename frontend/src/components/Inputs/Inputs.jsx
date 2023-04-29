@@ -29,12 +29,10 @@ const Inputs = () => {
     });
 
     const [show , setShow] = useState(false);
-    // const [btn , setBtn] = useState(false);
     
     const boolean = () => {
         let flag = true;
         for (let key in input) {
-            // console.log((key, input[key].value));
             if(input[key] === " " || input[key] === ""){
                 flag = false;
                 break;
@@ -130,7 +128,6 @@ const Inputs = () => {
                     <option className="option" value="1">January</option>
                     <option className="option" value="2">February</option>
                     <option className="option" value="3">March</option>
-                    {/* <option className="option" value="2">Electronics</option> */}
                     </select>
                 </div>
 
@@ -150,7 +147,6 @@ const Inputs = () => {
                         <option className="option" value="" disabled>Select Department</option>
                         <option className="option" value="finishing">Finishing</option>
                         <option className="option" value="sweing">Sewing</option>
-                    {/* <option className="option" value="2">Electronics</option> */}
                     </select>
                 </div>
 
@@ -175,7 +171,6 @@ const Inputs = () => {
                     <option className="option" value="10">10</option>
                     <option className="option" value="11">11</option>
                     <option className="option" value="12">12</option>
-                    {/* <option className="option" value="2">Electronics</option> */}
                     </select>
                 </div>
 
@@ -200,7 +195,7 @@ const Inputs = () => {
 
                 <div className="label-div">
                     <label>Targeted Productivity: </label>
-                    <input type="number" value={input.targeted_productivity} placeholder="Productivity" name="targeted_productivity" onChange={handleChange} autoComplete="off" required step="0.1" min="0.00" max="1.00" />
+                    <input type="number" value={input.targeted_productivity} placeholder="Productivity" name="targeted_productivity" onChange={handleChange} autoComplete="off" required step="0.001" min="0.00" max="1.00" />
                 </div>
 
                 <div className="label-div">
@@ -220,7 +215,7 @@ const Inputs = () => {
 
                 <div className="label-div">
                 <label>Smv: </label>
-                <input type="number" value={input.smv} placeholder="Smv" name="smv" onChange={handleChange} autoComplete="off" required step="0.01" min="0.00" max="60.00" />
+                <input type="number" value={input.smv} placeholder="Smv" name="smv" onChange={handleChange} autoComplete="off" required step="0.001" min="0.00" max="60.00" />
                 </div>
             </div>
             
