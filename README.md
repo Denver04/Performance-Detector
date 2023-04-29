@@ -13,4 +13,5 @@
 1. Clone the repository.
 2. Run " npm i " on the clone path.
 3. Run " npm i " after moving to the backend directory.
-4. Run " npm run dev " for frontend and " npm run dev " for backend in the backend directory
+4. Make sure you have python and all the required dependencies listed in requirements.txt.
+5. Run " npm run dev " for frontend and " npm run dev " for backend in the backend directory
